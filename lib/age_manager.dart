@@ -1,4 +1,4 @@
-extension FillInteger on int {
+extension PadInteger on int {
   String toPaddedString() => (this <= 9) ? "0$this" : "$this";
 }
 

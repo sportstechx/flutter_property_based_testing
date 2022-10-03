@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:glados/glados.dart'
     as g; //XXX: since some methods and props are also define in the flutter test lib, we add a preffix
@@ -43,7 +45,7 @@ void main() {
     print("Birthday : $birthday in month ${birthday.month}");
     print("Legal age: $futureBirthday in month ${futureBirthday.month}");
 
-    //expect(futureBirthday.month, birthday.month);
+    expect(futureBirthday.month, birthday.month);
     //expect(futureBirthday.day, birthday.day);
   });
 }
