@@ -39,10 +39,19 @@ So interesting parts would be:
     Basic implementation of a product storage mechanism
 
 * warehouse_test.dart
-    Unit tests created manually for the previous class
+    Example-based tests created manually for the previous class
 
 * warehouse_prop_test.dart
-    Property-based tests run by the 3rd party lib 
+    Property-based tests run by the 3rd party lib for the previous class
+
+* age_manager.dart
+    Buggy implementation of an age check mechanism to see if user can user our app
+
+* age_manager_test.dart
+    Example-based tests created manually for the previous class
+
+* age_manager_prop_test.dart
+    Property-based tests run by the 3rd party lib for the previous class
 
 ## Running the code
 

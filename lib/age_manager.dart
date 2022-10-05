@@ -8,7 +8,8 @@ class AgeManager {
       getLegalAgeTime(DateTime.parse("$year${month.toPaddedString()}${day.toPaddedString()}")).millisecondsSinceEpoch;
 
   DateTime getLegalAgeTime(DateTime birthday) {
-    int delta = 5;
+    // ignore: fixme
+    int delta = 5; //FIXME: workaround for leap years
     return birthday.add(Duration(days: 365 * 18 + delta));
   }
 }
