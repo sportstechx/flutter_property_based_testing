@@ -50,7 +50,7 @@ void main() {
   /*
    * Property-based tests are Glados().test() instead of simple test()
    * 
-   * The GladosN states the number of input for the current test 
+   * The GladosN states the number of inputs for the current test 
    */
   g.Glados2<String, int>().test('When ordering random items and quantities then warehouse is updated',
       (String itemName, int quantity) {

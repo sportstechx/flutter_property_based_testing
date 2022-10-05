@@ -9,6 +9,8 @@ import 'package:warehouse_prop_testing/age_manager.dart';
  * Entry point for testing
  */
 void main() {
+  var i = 0;
+
   Iterable<g.Shrinkable<int>> shrinkValues() {
     return [];
   }
@@ -25,23 +27,20 @@ void main() {
     return g.Shrinkable(r.nextInt(31) + 1, shrinkValues);
   }
 
-  var i = 0;
-
   /*
    * Property-based tests are Glados().test() instead of simple test()
    * 
-   * The GladosN states the number of input for the current test 
+   * The GladosN states the number of inputs for the current test 
    */
-  g.Glados3(getRandomYear, getRandomMonth, getRandomDay).test('When checking', (int year, int month, int day) {
+  g.Glados3(getRandomYear, getRandomMonth, getRandomDay)
+      .test('When checking birthday months then both in the same month', (int year, int month, int day) {
     final mgr = AgeManager();
-
-    i++;
 
     DateTime birthday = DateTime.parse("$year${month.toPaddedString()}${day.toPaddedString()}");
 
     final futureBirthday = mgr.getLegalAgeTime(birthday);
 
-    print("Iteration: $i --------------------------------------------------------");
+    print("Iteration: ${i++} --------------------------------------------------------");
     print("Birthday : $birthday in month ${birthday.month}");
     print("Legal age: $futureBirthday in month ${futureBirthday.month}");
 
