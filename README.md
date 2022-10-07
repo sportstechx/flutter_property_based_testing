@@ -2,6 +2,10 @@
 
 Property-based testing example on a Flutter app using Glados library
 
+See:
+
+https://signa-sportsunited.atlassian.net/wiki/spaces/TI/pages/edit-v2/1099399173
+
 ## Getting Started
 
 Property-based testing is a practice on which we exercise intensively a property (or a set of properties) of our program. It comes from the world
