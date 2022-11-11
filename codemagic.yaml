@@ -74,6 +74,7 @@ workflows:
 
         # TODO FAE-59 Go to App Store Connect, create new app manager key
         # https://docs.codemagic.io/flutter-code-signing/ios-code-signing/
+        # then copy issuer_id, key_id
 
         - app_store_credentials # <-- (Includes APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_KEY_IDENTIFIER, APP_STORE_CONNECT_PRIVATE_KEY)
           # APP_STORE_CONNECT_ISSUER_ID <-- Put your App Store Connect Issuer Id here
