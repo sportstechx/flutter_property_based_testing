@@ -5,25 +5,25 @@ workflows:
     triggering:
       events:
         - push
+        - pull_request
+        - tag
       branch_patterns:
         - pattern: master
           include: true
           source: true
-      events:
-        - pull_request
-      branch_patterns:
         - pattern: '*feature*'
+          include: false
+          source: false
+        - pattern: master
           include: true
           source: true
-      events:
-        - tag
-      branch_patterns:
-        - pattern: develop
-          include: true
-          source: false
       tag_patterns:
         - pattern: android-
           include: true
+        - pattern: excluded-tag
+          include: false
+        - pattern: included-tag
+          include: true    
     instance_type: mac_mini_m1
     max_build_duration: 120
     environment:
