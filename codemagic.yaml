@@ -60,7 +60,7 @@ workflows:
           - b.gomez@signa-sportsunited.com
         notify:
           success: true # To not receive a notification when a build succeeds
-          failure: false # To not receive a notification when a build fails
+          failure: true # To not receive a notification when a build fails
     
   ios-workflow:
     name: iOS Workflow
@@ -92,7 +92,7 @@ workflows:
           keychain initialize
       - name: Fetch signing files
         script: |
-          app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_STORE --create
+          app-store-connect fetch-signing-files $BUNDLE_ID --type IOS_APP_ADHOC --create
       - name: Use system default keychain
         script: |
           keychain add-certificates
@@ -129,4 +129,4 @@ workflows:
           - b.gomez@signa-sportsunited.com
         notify:
           success: true # To receive a notification when a build succeeds
-          failure: false # To not receive a notification when a build fails
+          failure: true # To not receive a notification when a build fails
