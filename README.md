@@ -1,6 +1,6 @@
 # warehouse_prop_testing
 
-Property-based testing example on a Flutter app using Glados library. Additional CI/CD config
+Property-based testing example on a Flutter app using Glados library. Additional CI/CD configuration
 
 See:
 
