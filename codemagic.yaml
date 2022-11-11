@@ -18,7 +18,7 @@ workflows:
           include: true
           source: true
       tag_patterns:
-        - pattern: android-
+        - pattern: 'android-*'
           include: true
         - pattern: excluded-tag
           include: false
