@@ -7,7 +7,7 @@ workflows:
       groups:
         # Add the group environment variables in Codemagic UI (either in Application/Team variables) - https://docs.codemagic.io/variables/environment-variable-groups/
 
-        # TODO EM-59 create these groups in remote_admin
+        # TODO FAE-59 create these groups in remote_admin
 
         - keystore_credentials # <-- (Includes CM_KEYSTORE, CM_KEYSTORE_PASSWORD, CM_KEY_PASSWORD, CM_KEY_ALIAS)
           # CM_KEYSTORE <-- Put your keystore file here
@@ -18,7 +18,7 @@ workflows:
         - other
       vars:
         CM_KEYSTORE_PATH: /tmp/keystore.keystore
-        PACKAGE_NAME: "com.example.warehouse_prop_testing" # TODO EM-59 Put your package name here
+        PACKAGE_NAME: "com.example.warehouse_prop_testing" # TODO FAE-59 Put your package name here
       flutter: stable
       xcode: latest
       cocoapods: default
@@ -70,7 +70,10 @@ workflows:
       groups:
         # Add the group environment variables in Codemagic UI (either in Application/Team variables) - https://docs.codemagic.io/variables/environment-variable-groups/
 
-        # TODO EM-59 create these groups in remote_admin
+        # TODO FAE-59 create these groups in remote_admin
+
+        # TODO FAE-59 Go to App Store Connect, create new app manager key
+        # https://docs.codemagic.io/flutter-code-signing/ios-code-signing/
 
         - app_store_credentials # <-- (Includes APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_KEY_IDENTIFIER, APP_STORE_CONNECT_PRIVATE_KEY)
           # APP_STORE_CONNECT_ISSUER_ID <-- Put your App Store Connect Issuer Id here
@@ -81,7 +84,7 @@ workflows:
       vars:
         XCODE_WORKSPACE: "Runner.xcworkspace"
         XCODE_SCHEME: "Runner"
-        BUNDLE_ID: "com.example.warehouse_prop_testing" # TODO EM-59 Put your bundle id here
+        BUNDLE_ID: "com.example.warehouse_prop_testing" # TODO FAE-59 Put your bundle id here
         APP_STORE_ID: 1111111111 # <-- Use the TestFlight Apple id number (An automatically generated ID assigned to your app) found under General > App Information > Apple ID.
       flutter: stable
       xcode: latest
