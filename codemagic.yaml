@@ -81,6 +81,9 @@ workflows:
       email:
         recipients:
           - b.gomez@signa-sportsunited.com
+          - amal.hichri@internetstores.com
+          - manuel.serra@internetstores.com
+          - lohan.bodevan@internetstores.com
         notify:
           success: true # To not receive a notification when a build succeeds
           failure: true # To not receive a notification when a build fails
@@ -155,6 +158,9 @@ workflows:
       email:
         recipients:
           - b.gomez@signa-sportsunited.com
+          - amal.hichri@internetstores.com
+          - manuel.serra@internetstores.com
+          - lohan.bodevan@internetstores.com
         notify:
           success: true # To receive a notification when a build succeeds
           failure: true # To not receive a notification when a build fails
